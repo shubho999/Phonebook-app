@@ -1,0 +1,28 @@
+mat-chip {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  font-size: 1.5rem;
+  padding: 1.5rem 0.5rem;
+}
+
+.material-icons, i {
+  font-size: 2.5rem;
+}
+
+mat-card {
+  margin: 16px;
+  background: #212121;
+}
+
+h4, p {
+  color: white;
+}
+
+.icon {
+  font-size: 2.5rem !important;
+  color: white;
+  text-align: center;
+  height: auto !important;
+  margin-right: 10px;
+}

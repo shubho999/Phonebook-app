@@ -1,0 +1,35 @@
+<mat-card>
+  <mat-nav-list>
+    <mat-list-item *ngFor="let contact of contacts">
+      <i mat-list-icon class="material-icons icon">
+        account_circle
+      </i>
+      <h4 mat-line>{{ contact.name }}</h4>
+      <p mat-line>{{ contact.number }}</p>
+
+      <mat-slide-toggle [checked]="contact.popular"
+        (change)="contact.popular = !contact.popular"
+        matTooltip="Selected" matTooltipPosition="above">
+      </mat-slide-toggle>
+      <button mat-icon-button (click)="delete(contact)"
+        matTooltip="Delete Contact" matTooltipPosition="above">
+        <mat-icon color="accent">delete</mat-icon>
+      </button>
+    </mat-list-item>
+  </mat-nav-list>
+</mat-card>
+
+<!--<button mat-fab (click)="add()">-->
+
+<!--  <mat-icon>add</mat-icon>-->
+<!--  Create Contact-->
+<!--</button>-->
+
+<mat-chip-list aria-label="Fish selection" >
+  <mat-chip color="accent" selected (click)="add()" fxLayout="row" fxLayoutGap="5px">
+    <i class="material-icons">
+      add_circle_outline
+    </i>
+    <span>Create Contact</span>
+  </mat-chip>
+</mat-chip-list>
